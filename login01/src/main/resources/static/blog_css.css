@@ -1,0 +1,28 @@
+*{margin: 0.3%;}
+
+div{border: none; background-color: white;  width: 60%; height:60%;
+	margin-left: auto; margin-right: auto;border-radius:10px;
+	background-color:rgba(255,255,255,0.5);}
+
+body{float: center; background-color: gainsboro;
+     background: url(background.jpg);background-repeat:no-repeat;background-size: 80%，80%;}
+
+h1{font-family: Kristen ITC;text-align: center;}
+
+hr{border: solid 2px lightgray;}
+
+a { font-size: 20px;
+	font-family: 幼圆;
+	margin: 20px 20px 25px 25px;}
+	
+.text{margin: 0.5%;border-radius:10px;width: 80%; height:80%}
+
+.title {text-align: center;font-family: Kristen ITC; font-size: 35px}
+#thema{="20"}
+
+#blogHead{font-size: 20px; margin-top: 20px;}
+
+#submit_button{border: none;width: 130px ;height: 60px;text-align: center; vertical-align: center; color: white; 
+	background-color: limegreen;padding: 15px 15px;border-radius:10px;}
+	
+#sub-title{text-align: center;font-family: 幼圆; font-size: 30px}
