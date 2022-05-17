@@ -1,0 +1,36 @@
+body{ background: url(sea.jpg) ; background-repeat:no-repeat ; background-size:100% ; background-position:0px -50px;}
+
+.blog_index{margin-left:10%;margin-top:3%;}
+
+.blog_index a {float: top;
+	font-family: 幼圆;font-size: 20px;color: black;
+    text-align: center;text-decoration: none;
+	margin: 20px 20px 25px 25px;}
+	
+a:hover {font-size:150%;}
+
+.search_container button {
+  float: right;
+  background: #ddd;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.search_container button:hover {
+  background: #ccc;}
+
+
+input {float: right ; padding: 6px ;  margin-right: 16px ; font-size: 17px;
+border: none ; border-radius: 10px ;}
+
+
+h1{font-family: Kristen ITC;text-align: center;}
+
+hr{border: solid 2px lightgray;}
+
+#search_icon{vertical-align: baseline;}
+	
+#blogHead{font-size: 20px; margin-top: 20px;}
+
+#sub-title{text-align: center;font-family: 幼圆; font-size: 30px}

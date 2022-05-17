@@ -1,0 +1,25 @@
+body{float: center; background-color: gainsboro;
+     background: url(sea.jpg); background-repeat:no-repeat; background-size:100%;background-position:0px -50px;}
+
+.Editor_box{  width: 60%; height:600px;
+	margin-left: auto; margin-right: auto;margin-top: 10px;border-radius:10px;
+	background-color:rgba(255,255,255,0.5);}
+	     
+h1{font-family: Kristen ITC;text-align: center;margin-top:10%;padding-top:5%;}
+
+hr{border: solid 2px lightgray;}
+
+a { font-size: 20px;
+	font-family: 幼圆;
+	margin: 20px 20px 25px 25px;}
+
+.input_box{margin-left:10%;padding-top:10px;}
+	
+.input_text{margin: 0.5%;border-radius:5px;width: 80%;}
+
+.title {text-align: center;font-family: Kristen ITC; font-size: 35px}
+
+
+#submit_buttom{border: none;width: 130px ;height: 60px;text-align: center; vertical-align: center; color: white; 
+	background-color: limegreen;padding: 15px 15px;border-radius:10px;font-size: 18px;}
+	

@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>login</title>
-    <link rel="stylesheet" type="text/css" href="login_css.css">
 
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="../static/Login_css.css">
+	<link rel="stylesheet" type="text/css" media="screen"
+		href="https://cdn.staticfile.org/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 
 <body>
-<div>
-<h1>Login</h1>
-<br>
-   <hr>
-   <br>
+	<div class="login_box">
 
-<form action="/Blog_zheng" method="post">
-    <laber for ="Username" class="desc">UserName:</laber>
-    <input type="text" id="username" class="text_input" name="username" placeholder="Enter UserName";>
-    <br>
-	<br>
-    <laber for ="password" class="desc">Password:</laber>
-    <input type="password" class="text_input" name="password" placeholder="Enter Password";>
-	<br>
-    <br>
-    <input type="submit" value="Login" id="submit_button" style="font-size: 18px;">
-    <imput type ="password",name="password">
+		<h1>Login</h1>
+		<hr>
+
+		<form action="/Blog_zheng" method="post">
+
+			<div class="input_box">
+				<i class="icon ion-person"></i>
+				<input type="text" id="username" class="text_input" placeholder="Enter UserName" ;>
+			</div>
+
+			<div class="input_box">
+				<i class="icon ion-ios-locked"></i>
+				<input type="password" class="text_input" placeholder="Enter Password" ;>
+			</div>
+
+			<input type="submit" value="Sign in" id="submit_buttom" ">
 </form>
+
 </div>
+
 </body>
+
 </html>

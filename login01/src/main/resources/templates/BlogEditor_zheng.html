@@ -5,34 +5,57 @@
 
 	<meta charset="UTF-8">
 	<title>Blog Editor</title>
-	<link rel="stylesheet" type="text/css" href="blog_css.css">
-	
+	<link rel="stylesheet" type="text/css" href="../static/BlogEditor_zheng_css.css">
+
 </head>
 
 <body>
-<div>
+	<div class="Editor_box">
 
-		<h1>
-		<br>
-		Blog Editor
-		<br>
-		<br>
-		<br></h1>
-		
-	<form action="/Blog_zheng" method="post">
-		<laber class="char" >标题&ensp;&ensp;&ensp;&ensp;</laber>
-		<textarea id="thema" class="text" rows="1" cols="100" maxlength="30" placeholder="请填写标题";></textarea>
-		<br>
-		<laber class="char">内容简介</laber>
-		<textarea id="intro" class="text" rows="1" cols="100" maxlength="50" placeholder="请填写内容简介";></textarea>
-	    <br>
-		<laber class="char">编辑内容</laber>
-		<textarea id="mainText" class="text" rows="10" cols="100"></textarea>
-		<br>
-		<laber  class="char">上传图片</laber>
-		<input type="submit" value="Image File" id="submit_button" class="image" style="font-size: 18px;">
+		<h1>Blog Editor</h1>
 
-	</form>
+		<form action="/Blog_zheng" method="post">
+
+			<div class="input_box">
+
+				<table>
+					<tr>
+						<td>
+							<laber class="char">标题</laber>
+						</td>
+						<td><textarea class="input_text" rows="1" cols="100" maxlength="30" placeholder="请填写标题" ;></textarea>
+						</td>
+					</tr>
+			</div>
+
+			<div class="input_box">
+				<tr>
+					<td>
+						<laber class="char">内容简介</laber>
+					</td>
+					<td><textarea class="input_text" rows="1" cols="100" maxlength="50" placeholder="请填写内容简介" ;></textarea>
+					</td>
+				</tr>
+			</div>
+
+			<div class="input_box">
+				<tr>
+					<td>
+						<laber class="char">编辑内容</laber>
+					</td>
+					<td><textarea class="input_text" rows="10" cols="100"></textarea></td>
+				</tr>
+			</div>
+
+			</table>
+			<tr>
+				<td>
+					<laber class="char">上传图片</laber>
+				</td>
+				<td><input type="submit" id="submit_buttom" value="Image File" ></td>
+			</tr>
+
+		</form>
 	</div>
 </body>
 

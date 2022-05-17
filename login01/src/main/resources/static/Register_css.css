@@ -1,0 +1,28 @@
+body{ background-color: gainsboro; 
+     background-image:url(bridge.jpg);background-repeat:no-repeat;background-size:100%;background-position:0px -50px;}
+
+h1{font-family: Kristen ITC;text-align: center;}
+
+hr{border: solid 0.5px lightgray;}
+
+.register_box{border: none; border-radius: 20px; 
+	width: 28%; padding:2%;
+	  box-shadow: 5px 5px 10px #aaaaaa;
+	margin:auto;margin-top: 5%;
+	background-color:rgba(240,240,240,0.5);}
+
+.input_box{margin:20px 60px;}
+
+.icon {font-size: 27px;}
+
+.text_input{border: none; background:none;border-bottom:#FFFFFF 2px solid;width: 200px;height:25px;margin-left:10px;}
+
+#head_text{text-align: center;}
+
+#register_bottom{text-align: center; vertical-align: center;  width: 60% ;height: 35px; margin-left:20%;margin-top:20px;color: white;font-size:17px;
+	background-image: linear-gradient(120deg,#a6c0fe 0%,#f68084 100%);
+	border-radius: 30px;
+	cursor:pointer;border: none;}
+
+
+
