@@ -15,15 +15,15 @@
 		<h1>Blog Editor</h1>
 
 		<form action="/Blog_zheng" method="post">
-
 			<div class="input_box">
 
-				<table>
+				<table style="margin:auto">
 					<tr>
 						<td>
 							<laber class="char">标题</laber>
 						</td>
-						<td><textarea class="input_text" rows="1" cols="100" maxlength="30" placeholder="请填写标题" ;></textarea>
+						<td><textarea class="input_text" rows="1" cols="100" maxlength="30"
+								placeholder="请填写标题"></textarea>
 						</td>
 					</tr>
 			</div>
@@ -33,7 +33,8 @@
 					<td>
 						<laber class="char">内容简介</laber>
 					</td>
-					<td><textarea class="input_text" rows="1" cols="100" maxlength="50" placeholder="请填写内容简介" ;></textarea>
+					<td><textarea class="input_text" rows="1" cols="100" maxlength="50" placeholder="请填写内容简介"
+							;></textarea>
 					</td>
 				</tr>
 			</div>
@@ -47,14 +48,17 @@
 				</tr>
 			</div>
 
-			</table>
+
 			<tr>
 				<td>
 					<laber class="char">上传图片</laber>
 				</td>
-				<td><input type="submit" id="submit_buttom" value="Image File" ></td>
+				<td><a href="javascript:;" class="file">选择文件<input type="file"></a></td>
 			</tr>
-
+			
+			</table>
+			
+			<input type="submit" id="submit_bottom" value="Submit">
 		</form>
 	</div>
 </body>
