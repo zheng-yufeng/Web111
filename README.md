@@ -14,3 +14,7 @@
 2.Register（设计变更）
 3.Blog（设计变更）
 4.BlogEditor（微调）
+
+2022/5/18
+1.Login.css（修正 随页面大小，要素的排版崩坏问题）
+2.Register.css（修正 随页面大小，要素的排版崩坏问题）
