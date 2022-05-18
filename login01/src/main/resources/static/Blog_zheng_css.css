@@ -7,7 +7,7 @@ body{ background: url(sea.jpg) ; background-repeat:no-repeat ; background-size:1
     text-align: center;text-decoration: none;
 	margin: 20px 20px 25px 25px;}
 	
-a:hover {font-size:150%;}
+a:hover {color:rgb(0, 0, 255);}
 
 .search_container button {
   float: right;
