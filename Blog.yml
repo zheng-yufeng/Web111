@@ -1,0 +1,102 @@
+openapi: '3.0.2'
+info:
+  title: blogs system
+  description: this is a blogs system for Lighthouse Plan
+  version: '1.0'
+servers:
+  - url: https://localhost:8080
+paths:
+  /login:
+    get:
+      tags:
+        - users
+      description: '返回登陆界面'
+      operationId: getLoginView
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:    
+              schema:
+                $ref: "#/components/schemas/LoginHtml"
+    post:
+      tags:
+        - users
+      description: '接受用户登陆信息'
+      operationId: login
+      requestBody:
+        required: true
+        content:
+          text/json:
+            schema:
+              type: "object"
+              properties:
+                username:
+                  type: "string"
+                password:
+                  type: "string"
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:    
+              schema:
+                $ref: "#/components/schemas/Login"
+  /register:
+    get:
+      tags:
+        - users
+      description: '返回注册界面'
+      operationId: getRegisterView
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:    
+              schema:
+                $ref: "#/components/schemas/LoginHtml"
+    post:
+      tags:
+        - users
+      description: '接受用户注册信息'
+      operationId: register
+      requestBody:
+        required: true
+        content:
+          text/json:
+            schema:
+              type: "object"
+              properties:
+                username:
+                  type: "string"
+                password:
+                  type: "string"
+                passwordAgan:
+                  type: "string"
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:    
+              schema:
+                $ref: "#/components/schemas/Login"
+
+
+components:
+  schemas:
+    LoginHtml:
+      type: "string"
+    Login:
+      type: "object"
+    RegisterHtml:
+      type: "string"
+    Register:
+      type: "object"
+
+      properties:
+        username:
+          type: "string"
+        view:
+          type: "string"
+
+  
