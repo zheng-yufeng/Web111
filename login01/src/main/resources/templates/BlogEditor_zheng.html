@@ -5,7 +5,7 @@
 
 	<meta charset="UTF-8">
 	<title>Blog Editor</title>
-	<link rel="stylesheet" type="text/css" href="../static/BlogEditor_zheng_css.css">
+	<link rel="stylesheet" type="text/css" th:href="@{/BlogEditor_zheng_css.css}">
 
 </head>
 
@@ -55,10 +55,10 @@
 				</td>
 				<td><a href="javascript:;" class="file">选择文件<input type="file"></a></td>
 			</tr>
-			
+
 			</table>
-			
-			<input type="submit" id="submit_bottom" value="Submit">
+
+			<input type="submit" id="submit_bottom" value="Submit"></input>
 		</form>
 	</div>
 </body>

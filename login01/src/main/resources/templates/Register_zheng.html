@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Register</title>
-	<link rel="stylesheet" type="text/css" href="../static/Register_css.css">
+	<link rel="stylesheet" type="text/css" th:href="@{/Register_css.css}">
 	<link rel="stylesheet" type="text/css" media="screen"
 		href="https://cdn.staticfile.org/ionicons/2.0.1/css/ionicons.min.css">
 </head>
@@ -17,35 +17,37 @@
 
 		<hr>
 
-		<form action="/Login_zheng" method="post">
+		<form action="/register" method="post">
+
 			<div class="input_box">
-				<i class="icon ion-email"></i>
-				<input type=email" class="text_input" placeholder="Enter Email" ">
+				<i class="icon ion-person"></i>
+				<input type="text" name="username" class="text_input" placeholder="Enter UserName">
 			</div>
+
+			<div class="input_box">
+				<i class="icon ion-ios-locked"></i>
+				<input type="password" name="password" class="text_input" placeholder="Enter Password"></input>
+			</div>
+
 			<div class=" input_box">
 				<i class="icon ion-ios-locked"></i>
-				<input type="password" class="text_input" placeholder="Enter Password" ">
+				<input type="password" name="password_again" class="text_input" placeholder="Repeat Password"></input>
 			</div>
-			<div class=" input_box">
-				<i class="icon ion-ios-locked"></i>
-				<input type="password" class="text_input" placeholder="Repeat Password" ">
-			</div>
+
 			<hr>
 			<p>By creating an account you agree to our
 				<a href=" https://www.google.com/">Tarms&Privacy</a>
-				</p>
-				<a href="Blog_zheng.html">
-					<input type="submit" id="register_bottom" value="Register" ">
-				<a>
+			</p>
+			<input type="submit" id="register_bottom" value="Register"></input>
 		</form>
 
 		<footer>
 			<p>Already have an account?
-				<a href=" Login_zheng.html">Sign in.</a>
-				</p>
-				</footer>
+				<a href="/login">Sign in</a>
+			</p>
+		</footer>
 
-			</div>
+	</div>
 
 </body>
 
