@@ -12,10 +12,11 @@
 <body>
 	<div class="Editor_box">
 
-		<h1>Blog Editor</h1>
-		<form action="/editor" method="post">
+		<h1>Blog Update</h1>
+		<form action="/update" method="post">
 
 			<input type="hidden" name="username" th:value="${username}">
+			<input type="hidden" name="blogId" th:value="${blogId}">
 
 			<div class="input_box">
 

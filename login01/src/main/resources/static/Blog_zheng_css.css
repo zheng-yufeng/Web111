@@ -1,12 +1,21 @@
-body{ background: url(sea.jpg) ; 
+body{ 
+		background: url(sea.jpg) ; 
 		background-repeat:no-repeat ; 
-		background-size:100% ; 
+		background-size:cover; 
 		background-position:0px -50px;}
 
-.blog_index{margin-left:10%;
+h1{
+	font-family: Kristen ITC;
+	text-align: center;}
+
+hr{border: solid 2px lightgray;}
+
+.blog_index{
+			margin-left:10%;
 			margin-top:3%;}
 
-.blog_index a {float: top;
+.blog_index a {	
+				float: top;
 				font-family: 幼圆;
 				font-size: 20px;
 				color: black;
@@ -26,24 +35,42 @@ a:hover {color:rgb(0, 0, 255);}
 .search_container button:hover {background: #ccc;}
 
 
-input {float: right ; 
+input {	float: right ; 
 		padding: 6px ;  
 		margin-right: 16px ; 
 		font-size: 17px;
 		border: none ; 
 		border-radius: 10px ;}
 
+.editor_botton{
+				text-align:right;
+				cursor:pointer;
+				border-radius: 20px;}
 
-h1{font-family: Kristen ITC;
-	text-align: center;}
 
-hr{border: solid 2px lightgray;}
+#editor_box{border: none; 
+			border-radius: 10px; 
+			width: 800px; 
+			padding:2%;
+			box-shadow: 5px 5px 10px #aaaaaa;
+			margin-left:auto ;
+			margin-right:auto ; 
+			margin-top: 1%;
+			background-color:rgba(240,240,240,0.5);}
 
 #search_icon{vertical-align: baseline;}
 	
-#blogHead{font-size: 20px; 
-		margin-top: 20px;}
+#blogHead{
+			font-size: 20px; 
+			margin-top: 20px;}
 
-#sub-title{text-align: center;
+#sub-title{
+			text-align: center;
 			font-family: 幼圆; 
 			font-size: 30px}
+
+#logout_botton{ margin-top:20%;
+				margin-right:100px; 
+				text-align:right;
+				cursor:pointer;
+				border-radius: 20px;}
