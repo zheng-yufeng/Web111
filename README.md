@@ -19,3 +19,7 @@
 1.Login.css（修正 随页面大小，要素的排版崩坏问题）
 2.Register.css（修正 随页面大小，要素的排版崩坏问题）
 4.BlogEditor （按钮调整）
+
+2022/5/23
+1.链接数据库
+2.串联login和register
