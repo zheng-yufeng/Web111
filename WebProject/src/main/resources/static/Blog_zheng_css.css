@@ -1,0 +1,97 @@
+body{ 
+		background: url(sea.jpg) ; 
+		background-repeat:no-repeat ; 
+		background-size:cover; 
+		background-position:0px -50px;}
+
+input {	float: right ; 
+		padding: 6px ;  
+		font-size: 18px;
+		border: none ; 
+		border-top-left-radius: 10px ;
+		border-bottom-left-radius: 10px ;
+		background-color:rgba(240,240,240,0.5);}
+
+h1{
+	font-family: Kristen ITC;
+	text-align: center;}
+
+hr{border: solid 2px lightgray;}
+
+a:hover {color:rgb(0, 0, 255);}
+
+.blog_index{
+			margin-left:20%;
+			margin-top:3%;}
+
+.blog_index a {	
+				float: top;
+				font-family: 幼圆;
+				font-size: 20px;
+				color: black;
+				text-align: center;
+				text-decoration: none;
+				margin: 20px 20px 25px 25px;}
+	
+
+
+.search_container button {
+  							float: right;
+  							margin-right:10px;
+							background-color:rgba(240,240,240,0.5);
+							font-size: 25px;
+							border: none;
+							border-top-right-radius: 10px ;
+							border-bottom-right-radius: 10px ;
+							cursor: pointer;}
+
+.search_container button:hover {background: #ccc;}
+
+
+.editor_botton{
+				margin-top:5px;
+				margin-left:80%;
+				text-align:right;
+				cursor:pointer;
+				border-radius: 10px;
+				width: 100px;
+				text-align: center;
+				background-color:rgba(240,240,240,0.5);}
+
+
+#editor_box{
+			border: none; 
+			border-radius: 10px; 
+			width: 60%; 
+			padding:2%;
+			box-shadow: 5px 5px 10px #aaaaaa;
+			margin-left:auto ;
+			margin-right:auto ; 
+			margin-top: 1%;
+			background-color:rgba(240,240,240,0.5);}
+
+#search_icon{vertical-align: baseline;}
+	
+#blogHead{
+			font-size: 20px; 
+			margin-top: 20px;}
+
+#sub-title{
+			text-align: center;
+			font-family: 幼圆; 
+			font-size: 30px}
+			
+#subsub-title{
+				text-align: center;
+				font-family: 幼圆; 
+				font-size: 20px}
+
+#editor_title{
+				text-align: center;	}
+
+#logout_botton{ 
+				margin-top:20%;
+				float:right; 
+				cursor:pointer;
+				border-radius: 10px;
+				background-color:rgba(240,240,240,0.5);}

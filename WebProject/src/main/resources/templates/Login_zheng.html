@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/Login_css.css}">
+	<link rel="stylesheet" type="text/css" media="screen"
+		href="https://cdn.staticfile.org/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+
+<body>
+	<div class="login_box">
+
+		<h1>Login</h1>
+		<hr>
+
+		<form action="/login" method="post">
+
+			<div class="input_box">
+				<i class="icon ion-person"></i>
+				<input type="text" id="username" name="username" class="text_input" placeholder="Enter UserName">
+			</div>
+
+			<div class="input_box">
+				<i class="icon ion-ios-locked"></i>
+				<input type="password" class="text_input" name="password" placeholder="Enter Password">
+			</div>
+
+			<input type="submit" value="Sign in" id="submit_button">
+
+		</form>
+
+		<div class="register_box">
+			<p>no account? <a href="/register">
+					<button id="register_botton">Register</button>
+				</a>
+			</p>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

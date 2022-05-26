@@ -1,0 +1,66 @@
+body{ 
+	 background-color: gainsboro; 
+     background-image:url(bridge.jpg);
+     background-repeat:no-repeat;
+     background-size:cover;}
+
+h1{
+	font-family: Kristen ITC;
+	text-align: center;}
+
+hr{border: solid 0.5px lightgray;}
+
+.login_box{
+			border: none; 
+			border-radius: 20px; 
+			width: 300px; 
+			padding:2%;
+			box-shadow: 5px 5px 10px #aaaaaa;
+			margin-left:auto ;
+			margin-right:auto ; 
+			margin-top: 10%;
+			background-color:rgba(240,240,240,0.5);}
+	
+.text_input{
+			border: none; 
+			background:none;
+			border-bottom:#FFFFFF 2px solid;
+			width: 200px;height:25px;
+			margin-left:10px}
+
+.input_box{
+			margin-top: 10%;
+			margin-left:auto;
+			margin-right:auto;}
+
+.register_box{margin-top:10%;}
+
+
+.icon {font-size: 23px;}
+
+
+
+#submit_button{
+				text-align: center; 
+				vertical-align: center;  
+				width: 60% ;
+				height: 35px; 
+				margin-left:20%;
+				margin-top:20px;
+				color: white;
+				font-size:17px;
+				background-image: linear-gradient(120deg,#a6c0fe 0%,#f68084 100%);
+				border-radius: 30px;
+				cursor:pointer;
+				border: none;}
+	
+#submit_button:hover{background-image: linear-gradient(1s20deg,#f68084 0%,#a6c0fe 100%);}
+
+#register_botton{
+				width: 80px ;
+				height: 20px; 
+				color: white;
+				background-image: linear-gradient(120deg,#a6c0fe 0%,#f68084 100%);
+				cursor:pointer;
+				border-radius: 10px;
+				border: none;}
