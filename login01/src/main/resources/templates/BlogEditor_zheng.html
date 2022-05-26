@@ -10,22 +10,29 @@
 </head>
 
 <body>
-	<div class="Editor_box">
 
+	<div class="blog_index">
+		<a th:href="@{/blog(username=${username})}">主页</a>
+		<a th:href="@{/editor(username=${username})}">文章</a>
+		<a href="https://www.yahoo.co.jp/">相册</a>
+		<a href="https://www.yahoo.co.jp/">留言板</a>
+		<a href="https://www.yahoo.co.jp/">Wang's Blog</a>
+		<a href="https://www.yahoo.co.jp/">Liu's Blog</a>
+	</div>
+
+	<div class="Editor_box">
 		<h1>Blog Editor</h1>
 		<form action="/editor" method="post">
-
 			<input type="hidden" name="username" th:value="${username}">
 
 			<div class="input_box">
-
 				<table style="margin:auto">
 					<tr>
 						<td>
 							<laber class="char" for="title">标题</laber>
 						</td>
-						<td><textarea class="input_text" name="title" rows="1" cols="100" maxlength="30"
-								placeholder="请填写标题"></textarea>
+						<td><textarea class="input_text" name="title" rows="1" cols="100" maxlength="15"
+								placeholder="请填写标题（15字以内）"></textarea>
 						</td>
 					</tr>
 			</div>
@@ -36,7 +43,7 @@
 						<laber class="char" for="introduction">内容简介</laber>
 					</td>
 					<td><textarea class="input_text" name="introduction" rows="1" cols="100" maxlength="50"
-							placeholder="请填写内容简介" ;></textarea>
+							placeholder="请填写内容简介（50字以内）" ;></textarea>
 					</td>
 				</tr>
 			</div>
@@ -55,14 +62,17 @@
 				<td>
 					<laber class="char" for="image">上传图片</laber>
 				</td>
-				<td><a href="javascript:;" class="file">选择文件<input type="file"></a></td>
+				<td><a href="javascript:;" class="file_botton">选择文件<input type="file"></a></td>
 			</tr>
 
 			</table>
 
 			<input type="submit" id="submit_botton" value="Submit">
+
 		</form>
+
 	</div>
+
 </body>
 
 </html>
