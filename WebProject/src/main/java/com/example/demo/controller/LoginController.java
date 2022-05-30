@@ -9,15 +9,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import lombok.extern.slf4j.Slf4j;
-
 import com.example.demo.UserInfoRepository.BlogInfoRepository;
 import com.example.demo.UserInfoRepository.UserInfoRepository;
 import com.example.demo.model.BlogInfo;
 import com.example.demo.model.UserInfo;
 
 @Controller
-@Slf4j
+
 public class LoginController {
 
 	@Autowired // UserInfoRepository是个接口，需要创建一个类之后再new，实例化。很麻烦，这个注释是让spring直接帮我们实例化

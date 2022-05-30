@@ -26,7 +26,7 @@ public class RegisterController {
 			@RequestParam("password") String password, //
 			@RequestParam("password_again") String passwordAgain, //
 			ModelAndView mv) {
-
+		
 		if (!password.equals(passwordAgain)) {
 			mv.setViewName("Register_fail");
 		} else {
