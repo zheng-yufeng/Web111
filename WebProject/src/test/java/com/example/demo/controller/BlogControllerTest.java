@@ -1,10 +1,13 @@
 package com.example.demo.controller;
 
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
+import java.util.List;
 import java.util.Optional;
 
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -31,43 +34,84 @@ public class BlogControllerTest {
 	private BlogInfoRepository blogInfoRepository;
 
 	@Test
-	public void TestAccessBlog_Success() throws Exception {
+	public void TestAccessBlog() throws Exception {
 		String username = "admin";
+
+		BlogInfo blogInfo = BlogInfo.builder()//
+				.blogTitle("title")//
+				.blogIntroduction("introduction")//
+				.blogContents("contents")//
+				.userName(username)//
+				.userId(1l)//
+				.blogId(1l)//
+				.build();
+
+		when(blogInfoRepository.findAll()).thenReturn(List.of(blogInfo));
 
 		RequestBuilder request = MockMvcRequestBuilders//
 				.get("/blog")//
 				.param("username", username)//
 				.accept(MediaType.APPLICATION_JSON);
 
-		mockMvc.perform(request).andExpect(view().name("Blog_zheng"));
+		mockMvc.perform(request)//
+				.andExpect(view().name("Blog_zheng"))//
+				.andExpect(model().attribute("blogs", Matchers.hasItem(//
+						Matchers.allOf(//
+								Matchers.hasProperty("blogTitle", Matchers.is("title")), //
+								Matchers.hasProperty("blogIntroduction", Matchers.is("introduction")), //
+								Matchers.hasProperty("blogContents", Matchers.is("contents"))//
+						))))//
+				.andExpect(model().attribute("username", username));
 	}
 
 	@Test
-	public void TestAccessBlogEditor_Success() throws Exception {
+	public void TestAccessBlogEditor() throws Exception {
 		String username = "admin";
+
+		BlogInfo blogInfo = BlogInfo.builder()//
+				.blogTitle("title")//
+				.blogIntroduction("introduction")//
+				.blogContents("contents")//
+				.userName(username)//
+				.userId(1l)//
+				.blogId(1l)//
+				.build();
+
+		when(blogInfoRepository.findAll()).thenReturn(List.of(blogInfo));
 
 		RequestBuilder request = MockMvcRequestBuilders//
 				.get("/editor")//
 				.param("username", username)//
 				.accept(MediaType.APPLICATION_JSON);
 
-		mockMvc.perform(request).andExpect(view().name("BlogEditor_zheng"));
+		mockMvc.perform(request)//
+				.andExpect(view().name("BlogEditor_zheng"))//
+				.andExpect(model().attribute("blogs", Matchers.hasItem(//
+						Matchers.allOf(//
+								Matchers.hasProperty("blogTitle", Matchers.is("title")), //
+								Matchers.hasProperty("blogIntroduction", Matchers.is("introduction")), //
+								Matchers.hasProperty("blogContents", Matchers.is("contents"))//
+						))))//
+				.andExpect(model().attribute("username", username));
 	}
 
 	@Test
-	public void TestBlogEditor_Success() throws Exception {
+	public void TestBlogEdit() throws Exception {
 		String username = "admin";
 		String title = "title";
 		String introduction = "introduction";
 		String contents = "contents";
+
 		BlogInfo blogInfo = BlogInfo.builder()//
 				.blogTitle(title)//
 				.blogIntroduction(introduction)//
 				.blogContents(contents)//
 				.userName(username)//
+				.userId(1l)//
+				.blogId(1l)//
 				.build();
 
-		when(blogInfoRepository.save(blogInfo)).thenReturn(blogInfo);
+		when(blogInfoRepository.findAll()).thenReturn(List.of(blogInfo));
 
 		RequestBuilder request = MockMvcRequestBuilders//
 				.post("/editor")//
@@ -77,20 +121,33 @@ public class BlogControllerTest {
 				.param("username", username)//
 				.accept(MediaType.APPLICATION_JSON);
 
-		mockMvc.perform(request).andExpect(view().name("Blog_zheng"));
-
+		mockMvc.perform(request)//
+				.andExpect(view().name("Blog_zheng"))//
+				.andExpect(model().attribute("blogs", Matchers.hasItem(//
+						Matchers.allOf(//
+								Matchers.hasProperty("blogTitle", Matchers.is("title")), //
+								Matchers.hasProperty("blogIntroduction", Matchers.is("introduction")), //
+								Matchers.hasProperty("blogContents", Matchers.is("contents"))//
+						))))//
+				.andExpect(model().attribute("username", username));
 	}
 
 	@Test
-	public void TestBlogDelete_Success() throws Exception {
+	public void TestBlogDelete() throws Exception {
 		String username = "admin";
 		Long blogId = (long) 999;
 
 		BlogInfo blogInfo = BlogInfo.builder()//
+				.blogTitle("title")//
+				.blogIntroduction("introduction")//
+				.blogContents("contents")//
+				.userName(username)//
+				.userId(1l)//
 				.blogId(blogId)//
-				.userName(username).build();
+				.build();
 
 		when(blogInfoRepository.findById(blogId)).thenReturn(Optional.of(blogInfo));
+		when(blogInfoRepository.findAll()).thenReturn(List.of(blogInfo));
 
 		RequestBuilder request = MockMvcRequestBuilders//
 				.get("/delete")//
@@ -98,11 +155,20 @@ public class BlogControllerTest {
 				.param("username", username)//
 				.accept(MediaType.APPLICATION_JSON);
 
-		mockMvc.perform(request).andExpect(view().name("Blog_zheng"));
+		mockMvc.perform(request)//
+				.andExpect(view().name("Blog_zheng"))//
+				.andExpect(model().attribute("blogs", Matchers.hasItem(//
+						Matchers.allOf(//
+								Matchers.hasProperty("blogId", Matchers.is((long) 999)), //
+								Matchers.hasProperty("blogTitle", Matchers.is("title")), //
+								Matchers.hasProperty("blogIntroduction", Matchers.is("introduction")), //
+								Matchers.hasProperty("blogContents", Matchers.is("contents"))//
+						))))//
+				.andExpect(model().attribute("username", username));
 	}
 
 	@Test
-	public void TestAccessBlogUpdate_Success() throws Exception {
+	public void TestAccessBlogUpdate() throws Exception {
 		String username = "admin";
 		Long blogId = (long) 999;
 
@@ -112,11 +178,14 @@ public class BlogControllerTest {
 				.param("username", username)//
 				.accept(MediaType.APPLICATION_JSON);
 
-		mockMvc.perform(request).andExpect(view().name("BlogUpdate_zheng"));
+		mockMvc.perform(request)//
+				.andExpect(view().name("BlogUpdate_zheng"))//
+				.andExpect(model().attribute("username", username))//
+				.andExpect(model().attribute("blogId", (long) 999));
 	}
 
 	@Test
-	public void TestBlogUpdate_Success() throws Exception {
+	public void TestBlogUpdate() throws Exception {
 		String username = "admin";
 		Long blogId = (long) 999;
 		String title = "title";
@@ -130,8 +199,9 @@ public class BlogControllerTest {
 				.userName(username)//
 				.blogId(blogId)//
 				.build();
- 
+
 		when(blogInfoRepository.findById(blogId)).thenReturn(Optional.of(blogInfo));
+		when(blogInfoRepository.findAll()).thenReturn(List.of(blogInfo));
 
 		RequestBuilder request = MockMvcRequestBuilders//
 				.post("/update")//
@@ -142,7 +212,15 @@ public class BlogControllerTest {
 				.param("blogId", "" + blogId)//
 				.accept(MediaType.APPLICATION_JSON);
 
-		mockMvc.perform(request).andExpect(view().name("Blog_zheng"));
+		mockMvc.perform(request)//
+				.andExpect(view().name("Blog_zheng"))//
+				.andExpect(model().attribute("blogs", Matchers.hasItem(//
+						Matchers.allOf(//
+								Matchers.hasProperty("blogTitle", Matchers.is("title")), //
+								Matchers.hasProperty("blogIntroduction", Matchers.is("introduction")), //
+								Matchers.hasProperty("blogContents", Matchers.is("contents"))//
+						))))//
+				.andExpect(model().attribute("username", username));
 	}
 
 }

@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -61,7 +60,7 @@ public class BlogController {
 				.blogIntroduction(introduction)//
 				.blogContents(contents)//
 				.build();
- 
+
 		blogInfoRepository.save(blogInfo);
 
 		mv.addObject("blogs", blogInfoRepository.findAll());
@@ -111,7 +110,7 @@ public class BlogController {
 			@RequestParam("username") String username, //
 			@RequestParam("blogId") Long blogId, //
 			ModelAndView mv) {
- 
+
 		BlogInfo blogInfo = blogInfoRepository.findById(blogId).get();
 
 		blogInfo.setBlogTitle(title);
@@ -122,7 +121,7 @@ public class BlogController {
 
 		mv.addObject("blogs", blogInfoRepository.findAll());
 		mv.addObject("username", username);
- 
+
 		mv.setViewName("Blog_zheng");
 
 		return mv;
